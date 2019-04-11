@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pizza Pequena</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Escolha o sabor da sua pizza:</h1>
+  <ion-list radio-group [(ngModel)]="saborEscolhido">
+      <ion-item ion-item *ngFor="let item of items">
+        <ion-label>{{item.sabor}} Preço R$:{{item.preco}}</ion-label>
+        <ion-radio value={{item.sabor}}></ion-radio>
+      </ion-item>
+  </ion-list>
+</ion-content>

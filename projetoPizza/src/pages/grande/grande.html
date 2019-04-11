@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Pizza Grande</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+    <h1>Escolha os sabores da sua pizza:</h1><ion-list>
+        <ion-list>
+          <ion-item *ngFor="let item of items; let i = index">
+              <ion-label>{{item.sabor}} Preço R$:{{item.preco}}</ion-label>
+              <ion-checkbox  [(ngModel)]="item.checked" (ionChange)="checked(i)" [disabled]="limitCheck(i)"></ion-checkbox>
+          </ion-item>
+        </ion-list>

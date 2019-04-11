@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="login-page">
+    <div class="form">
+      <form class="login-form">
+        <input [(ngModel)]="user" [ngModelOptions]="{standalone: true}" type="text" placeholder="Usuário"/>
+        <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Senha"/>
+        <button (click)="login()">login</button>
+      </form>
+    </div>
+  </div>
+</ion-content>
